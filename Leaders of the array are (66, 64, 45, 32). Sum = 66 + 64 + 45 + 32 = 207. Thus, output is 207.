@@ -1,0 +1,11 @@
+def sum_of_leaders(arr):
+    if not arr:
+        return -1
+    total = max_so_far = 0
+    for num in reversed(arr):
+        if num > max_so_far:
+            total += num
+            max_so_far = num
+    return  total
+arr = [52, 66, 64, 36, 45, 24, 32]
+print(sum_of_leaders(arr))  # Output: 207
